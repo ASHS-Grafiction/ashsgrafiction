@@ -185,7 +185,7 @@ a[href='#_none'] {
   z-index: 2;
   transition: background 0.2s, height 0.2s;
   background: rgba(var(--toolbar-bg-color), 0);
-  height: 240px;
+  height: 100px;
   overflow: hidden;
 }
 
@@ -195,7 +195,7 @@ a[href='#_none'] {
 
   /* Note: this is the exact height of the menu. Must be explicitly set in order to animate
   height transition */
-  height: 489px;
+  height: 420px;
 }
 
 .toolbar .menu-icon {
@@ -203,7 +203,7 @@ a[href='#_none'] {
   background-size: cover;
   width: 24px;
   height: 24px;
-  margin: 6px;
+  margin: 3px;
   opacity: 0.4;
   transition: opacity 0.4s;
 }
@@ -286,7 +286,7 @@ label {
     transition: opacity 0.4s;
   }
   .toolbar:hover {
-    height: 720px;
+    height: 470px;
   }
   .menu-items .label-toggle span{
     left: 20px
