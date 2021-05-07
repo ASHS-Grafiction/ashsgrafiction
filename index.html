@@ -27,6 +27,11 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6T92VW715W"></script>
 <script>
+  if(localStorage.getItem('disableanalytics')){
+    window['ga-disable-UA-6T92VW715W-Y'] = true;
+  }
+</script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -48,7 +53,7 @@
         </div>
     </nav>
     <main style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(&quot;/assets/img/skewed-print.png&quot;), linear-gradient(rgba(13,202,240,0.2) 0%, rgba(111,66,193,0.2) 100%), url(&quot;/assets/img/FBCP_v2.png&quot;) center / cover no-repeat;color: rgb(33, 37, 41);">
-        <div class="toast fade text-end order-first fixed-top hide" role="alert" style="margin-top: 200px;">
+        <div class="toast fade text-end order-first fixed-top hide" role="alert" data-bs-delay="12000" style="margin-top: 200px;">
             <div class="card border rounded">
                 <div class="card-body text-start" style="margin-left: 65px;">
                     <h4 class="card-title">This website uses cookies</h4>

@@ -8,6 +8,7 @@ function dontshow() {
 }
 
 function disableanalytics() {
+    localStorage.setItem('disableanalytics', true);
     window['ga-disable-UA-6T92VW715W-Y'] = true;
     location.reload();
 }
