@@ -64,6 +64,7 @@ button,
 input {
   font-family: Roboto, sans-serif;
   color: var(--text-color);
+  size: 16px;
 }
 
 .stop-scrolling {
@@ -155,6 +156,9 @@ a[href='#_none'] {
   position: relative;
   text-align: center;
   margin-top: var(--page-vertical-margin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .arrow {
@@ -176,32 +180,31 @@ a[href='#_none'] {
 
 .toolbar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 8px;
+  left: 8px;
   z-index: 2;
   transition: background 0.2s, height 0.2s;
   background: rgba(var(--toolbar-bg-color), 0);
-  height: 240px;
-  overflow: hidden;
+  height: 100px;
 }
 
-.toolbar:hover {
+ .toolbar:hover{
   background: rgba(var(--toolbar-bg-color), 1);
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.17);
 
   /* Note: this is the exact height of the menu. Must be explicitly set in order to animate
   height transition */
-  height: 489px;
+  height: 470px;
 }
 
 .toolbar .menu-icon {
   background: var(--menu-icon);
   background-size: cover;
-  width: 32px;
-  height: 32px;
-  margin: 14px;
-  opacity: 0.2;
-  transition: opacity 0.2s;
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  opacity: 0.4;
+  transition: opacity 0.4s;
 }
 
 .toolbar:hover .menu-icon {
@@ -240,7 +243,7 @@ a[href='#_none'] {
   background: rgba(0, 0, 0, 0);
   border: none;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -257,7 +260,7 @@ a[href='#_none'] {
 }
 
 label {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .label-toggle {
@@ -265,6 +268,49 @@ label {
   cursor: pointer;
   padding: 12px 24px 12px 36px;
   margin-left: 24px;
+}
+
+@media (max-width: 1000px) {
+  .menu-items {
+    font-size: 24px;
+  }
+  .toolbar .menu-icon {
+    background: var(--menu-icon);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    opacity: 0.4;
+    margin-top: 6px;
+    margin-left: 6px;
+    transition: opacity 0.4s;
+  }
+	.menu-items button {
+		display: none;
+	}
+	#sizing-subtitle{
+		display: none;
+	}
+	.toolbar:hover{
+		height: 260px;
+	}
+  .menu-items .label-toggle span{
+    left: 20px
+  }
+  .label-toggle .input-toggle + *::before {
+    top: calc(50% - 12px);
+    left: 0;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+  }
+
+  .label-toggle .input-toggle + *::after {
+    top: calc(50% - 8px);
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+  }
 }
 
 .label-toggle .input-toggle {
@@ -324,7 +370,7 @@ label {
   position: fixed;
   right: 0;
   top: 0;
-  padding-left: 128px;
+  padding-left: 0px;
   display: flex;
   flex-direction: row;
   z-index: 1;
@@ -340,7 +386,7 @@ label {
 }
 
 #scrubber {
-  width: 90px;
+  width: 0px;
   cursor: pointer;
   height: 100vh;
   z-index: 1;
@@ -357,7 +403,7 @@ label {
 }
 
 .scrubber-preview-image {
-  height: 180px;
+  height: 0px;
   display: block;
   margin-top: 8px;
   margin-bottom: 8px;
