@@ -6,11 +6,14 @@ function thisisaphone() {
     }
 }
 
+firstTap = true;
+
 $( ".card-body" ).hide();
 
 $(".card").hover(function() {
     if(thisisaphone()){
         $( ".card-body" ).hide();
+        firstTap = true;
     }
    $(this).children(".card-body").show();
 });
