@@ -7,3 +7,10 @@
   cursor: pointer;
 }
 
+.missing {
+  cursor: default;
+}
+
+.missing {
+}
+
