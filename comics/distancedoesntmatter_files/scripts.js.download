@@ -291,7 +291,9 @@
   }
 
   function handleFitWidth() {
-	setImagesWidth(screenClamp.fit, getWidth());
+	// setImagesWidth(screenClamp.fit, getWidth());
+	const key = event.target.dataset.fitKey;
+	smartFitImages(smartFit[key]);
   }
 
   function handleFitHeight() {

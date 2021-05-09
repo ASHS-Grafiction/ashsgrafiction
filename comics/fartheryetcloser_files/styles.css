@@ -155,10 +155,12 @@ a[href='#_none'] {
 .page {
   position: relative;
   text-align: center;
-  margin-top: var(--page-vertical-margin);
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+	margin-left: 17vw;
+	margin-right: 17vw;
 }
 
 .arrow {
@@ -311,6 +313,11 @@ label {
     height: 16px;
     border-radius: 10px;
   }
+	
+	.page {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .label-toggle .input-toggle {

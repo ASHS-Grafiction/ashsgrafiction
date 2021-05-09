@@ -155,12 +155,12 @@ a[href='#_none'] {
 .page {
   position: relative;
   text-align: center;
-  margin-top: var(--page-vertical-margin);
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-	margin-left: 12vw;
-	margin-right: 12vw;
+	margin-left: 17vw;
+	margin-right: 17vw;
 }
 
 .arrow {
