@@ -80,6 +80,7 @@ input {
   border-color: var(--img-border-color);
   display: block;
   margin: auto;
+	max-width: 65vw;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -159,8 +160,6 @@ a[href='#_none'] {
   display: flex;
   justify-content: center;
   align-items: center;
-	margin-left: 17vw;
-	margin-right: 17vw;
 }
 
 .arrow {
@@ -313,11 +312,6 @@ label {
     height: 16px;
     border-radius: 10px;
   }
-	
-	.page {
-		margin-left: auto;
-		margin-right: auto;
-	}
 }
 
 .label-toggle .input-toggle {
