@@ -312,6 +312,10 @@ label {
     height: 16px;
     border-radius: 10px;
   }
+	
+	.image {
+		max-width: 100vw;
+	}
 }
 
 .label-toggle .input-toggle {
