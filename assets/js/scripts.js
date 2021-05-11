@@ -12,14 +12,15 @@ $( ".card-body" ).hide();
 
 $(".card").hover(function() {
     if(thisisaphone()){
-        $( ".card-body" ).slideUp(200);
+        $( ".card-body" ).slideUp(50);
         firstTap = true;
     }
-   $(this).children(".card-body").slideDown(300);
+   $(this).children(".card-body").slideDown(50);
 });
 
 if(!thisisaphone()){
     $(".card").mouseout(function() {
-       $(this).children(".card-body").slideUp(200);
+        e = event.toElement || event.relatedTarget; if (this.contains(e)) return;
+        $(this).children(".card-body").slideUp(50);
     });
 }
