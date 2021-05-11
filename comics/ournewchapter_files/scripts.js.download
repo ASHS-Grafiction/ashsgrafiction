@@ -1,3 +1,11 @@
+/*
+  ▄ .▄      ▄▄▄  ▪  ·▄▄▄▄•       ▐ ▄ ▄▄▄▄▄ ▄▄▄· ▄▄▌      ▄▄▄  ▄▄▄ . ▄▄▄· ·▄▄▄▄  ▄▄▄ .▄▄▄  
+██▪▐█▪     ▀▄ █·██ ▪▀·.█▌▪     •█▌▐█•██  ▐█ ▀█ ██•      ▀▄ █·▀▄.▀·▐█ ▀█ ██▪ ██ ▀▄.▀·▀▄ █·
+██▀▐█ ▄█▀▄ ▐▀▀▄ ▐█·▄█▀▀▀• ▄█▀▄ ▐█▐▐▌ ▐█.▪▄█▀▀█ ██▪      ▐▀▀▄ ▐▀▀▪▄▄█▀▀█ ▐█· ▐█▌▐▀▀▪▄▐▀▀▄ 
+██▌▐▀▐█▌.▐▌▐█•█▌▐█▌█▌▪▄█▀▐█▌.▐▌██▐█▌ ▐█▌·▐█ ▪▐▌▐█▌▐▌    ▐█•█▌▐█▄▄▌▐█ ▪▐▌██. ██ ▐█▄▄▌▐█•█▌
+▀▀▀ · ▀█▄▀▪.▀  ▀▀▀▀·▀▀▀ • ▀█▄▀▪▀▀ █▪ ▀▀▀  ▀  ▀ .▀▀▀     .▀  ▀ ▀▀▀  ▀  ▀ ▀▀▀▀▀•  ▀▀▀ .▀  ▀ 
+*/
+
 (function () {
   /**
    * CONFIGURATION AND CONSTANTS
@@ -179,7 +187,6 @@
   const scrubberMarker = document.getElementById('scrubber-marker');
   const scrubberMarkerActive = document.getElementById('scrubber-marker-active');
   const horizontalReader = document.getElementById('input-horizontal');
-  const horizontalReaderEnabled = false;
   let scrubberImages; // Array of images, set in `setupScrubber()`
 
   const animationDispatcher = createAnimationDispatcher();
@@ -315,6 +322,7 @@
   // TODO: Save option in cookie/localstorage
   function handleHorizontalReader(config) {
 		const horizontalReaderEnabled = event.target.checked;
+		const darkModeEnabled = event.target.checked;
 		if (horizontalReaderEnabled) {	
 			document.body.classList.add("stop-scrolling");	
 			$(".page").css( "margin-bottom", "4000px" );
@@ -333,6 +341,7 @@
 		}
 		visiblePage.scrollIntoView();
 		setImagesDimensions(screenClamp.shrink, getWidth(), getHeight());
+
 		if(seamlessCheckbox.checked == true) {
 			seamlessCheckbox.checked = false;
 			document.body.classList.remove('seamless');
@@ -413,30 +422,35 @@
   }
 
   function setImagesDimensions(fitMode, width, height) {
-	for (const img of images) {
-	  switch (fitMode) {
-		case screenClamp.fit:
-		  // Not implemented
-		  break;
-		case screenClamp.shrink:
-		  Object.assign(img.style, {
-			width: null,
-			maxHeight: `${height}px`,
-			height: null,
-			maxWidth: `${width}px`,
-		  });
-		  break;
-		default:
-		  Object.assign(img.style, {
-			width: null,
-			maxWidth: null,
-			height: null,
-			maxHeight: null,
-		  });
-	  }
-	}
-	visiblePage.scrollIntoView();
-  }
+		for (const img of images) {
+			switch (fitMode) {
+			case screenClamp.fit:
+				Object.assign(img.style, {
+				width: `${height}px`,
+				maxHeight: null,
+				height: `${width}px`,
+				maxWidth: null,
+				});
+				break;
+			case screenClamp.shrink:
+				Object.assign(img.style, {
+				width: null,
+				maxHeight: `${height}px`,
+				height: null,
+				maxWidth: `${width}px`,
+				});
+				break;
+			default:
+				Object.assign(img.style, {
+				width: null,
+				maxWidth: null,
+				height: null,
+				maxHeight: null,
+				});
+			}
+		}
+		visiblePage.scrollIntoView();
+		}
 
   function smartFitImages(fitMode) {
 	for (const { image: img, orientation: orient } of imagesMeta) {
@@ -650,11 +664,12 @@
 	})(); */
 
   function main() {
-	setupListeners();
-	loadSettings();
-	attachIntersectObservers();
-	//checkVersion();
-	setupScrubber();
+		setupListeners();
+		loadSettings();
+		attachIntersectObservers();
+		//checkVersion();
+		setupScrubber();
+		setImagesWidth(screenClamp.fit, getWidth());
   }
 
   main();
