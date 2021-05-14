@@ -29,6 +29,7 @@ if(!thisisaphone()){
 
 if(thisisaphone()){
     $("#cover-photo-no-parallax").css("height", "70vh");
+    $("#cover-kickass").css("height", "70vh");
     $("#about-us").css("padding", "8px");
     $("#cover-photo-1").hide();
     $("#cover-photo-no-parallax").show();
