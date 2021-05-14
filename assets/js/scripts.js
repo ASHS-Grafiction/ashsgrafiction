@@ -6,6 +6,8 @@ function thisisaphone() {
     }
 }
 
+$("#cover-photo-no-parallax").hide();
+
 firstTap = true;
 
 $( ".card-body" ).hide();
@@ -23,4 +25,11 @@ if(!thisisaphone()){
         e = event.toElement || event.relatedTarget; if (this.contains(e)) return;
         $(this).children(".card-body").slideUp(50);
     });
+}
+
+if(thisisaphone()){
+    $("#cover-photo-no-parallax").css("height", "70vh");
+    $("#about-us").css("padding", "8px");
+    $("#cover-photo-1").hide();
+    $("#cover-photo-no-parallax").show();
 }

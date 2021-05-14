@@ -47,7 +47,7 @@
         <div class="container-fluid"><a class="navbar-brand" href="#"></a><a href="/index.html"><img style="height: 80px;filter: brightness(100%) invert(100%);padding-right: 16px;padding-left: 8px;padding-bottom: 2px;padding-top: 2px;" src="/assets/img/B_GRAFICTION2.png"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="filter: invert(100%);"><span class="visually-hidden" style="filter: invert(100%);">Toggle navigation</span><span class="navbar-toggler-icon" style="filter: invert(100%);"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1" style="filter: invert(100%);">
                 <ul class="navbar-nav" style="filter: invert(100%);">
-                    <li class="nav-item" style="filter: invert(100%);"><a class="nav-link active jello animated" style="padding-left: 8px;padding-right: 8px;text-shadow: 1px 2px 0px rgb(53,0,204);filter: invert(100%);font-weight: 400;font-family: Oswald, sans-serif;font-size: 32px;color: #ffffff;" href="/comics/index.html">Anthology</a></li>
+                    <li class="nav-item" style="filter: invert(100%);"><a class="nav-link active jello animated" style="padding-left: 8px;padding-right: 8px;text-shadow: 1px 2px 0px rgb(53,0,204);filter: invert(100%);font-weight: 400;font-family: Oswald, sans-serif;font-size: 32px;color: #ffffff;" href="/comics/index.html#sy20-21">Anthology</a></li>
                     <li class="nav-item" style="text-shadow: 0px 1px 3px rgba(58,58,58,0.67);padding-left: 8px;padding-right: 8px;filter: invert(100%);font-weight: 300;font-family: Oswald, sans-serif;font-size: 32px;color: #ffffff;"><a class="nav-link" href="/comics/index.html" style="text-shadow: 1px 2px 0px rgb(198,0,0);padding-left: 8px;padding-right: 8px;filter: invert(100%);font-weight: 300;font-family: Oswald, sans-serif;font-size: 32px;color: #ffffff;">Comics</a></li>
                     <li class="nav-item" style="text-shadow: 0px 1px 3px rgba(58,58,58,0.67);padding-left: 8px;padding-right: 8px;filter: invert(100%);font-weight: 300;font-family: Oswald, sans-serif;font-size: 32px;color: #ffffff;"><a class="nav-link" href="artworks" style="text-shadow: 1px 2px 0px #aea700;padding-left: 8px;padding-right: 8px;filter: invert(100%);font-weight: 300;font-family: Oswald, sans-serif;font-size: 32px;color: #ffffff;">Artworks</a></li>
                     <li class="nav-item" style="text-shadow: 0px 1px 3px rgba(58,58,58,0.67);padding-left: 8px;padding-right: 8px;filter: invert(100%);font-weight: 300;font-family: Oswald, sans-serif;font-size: 32px;color: #ffffff;"><a class="nav-link" href="contact" style="text-shadow: 1px 2px 0px rgb(188,188,188);padding-left: 8px;padding-right: 8px;filter: invert(100%);font-weight: 300;font-family: Oswald, sans-serif;font-size: 32px;color: #ffffff;">Contact</a></li>
@@ -56,26 +56,29 @@
         </div>
     </nav>
     <section style="padding-bottom: 96px;color: rgb(0,0,0);background: url(&quot;/assets/img/skewed-print.png&quot;), #313437;"></section>
-    <div data-bss-parallax-bg="true" style="background: url(&quot;/assets/img/Final4.png&quot;) center / cover no-repeat;cursor: pointer;" onclick="window.location.href = &quot;https://ashsgrafiction.com/comics&quot;;"></div>
-    <div class="text-center d-xxl-flex justify-content-xxl-center" style="background: url(&quot;/assets/img/Final4.png&quot;) center / cover no-repeat;text-align: center;cursor: pointer;" onclick="window.location.href = &quot;https://ashsgrafiction.com/comics&quot;;"><img class="img-fluid d-xxl-flex justify-content-xxl-center" id="cover-photo" src="/assets/img/Text.png" style="text-align: center;opacity: 0;height: 95vh;" onload="if(thisisaphone()){$(&quot;#cover-photo&quot;).css(&quot;height&quot;, &quot;37vh&quot;);}"></div>
-    <main style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(&quot;/assets/img/skewed-print.png&quot;), linear-gradient(rgba(13,202,240,0.2) 0%, rgba(111,66,193,0.2) 100%), url(&quot;/assets/img/Graf.jpg&quot;) bottom / auto no-repeat;color: rgb(0,0,0);">
+    <div class="text-center" data-bss-parallax-bg="true" id="cover-photo" style="background: url(&quot;final-fg-flipped (2).png&quot;) center / auto no-repeat;cursor: pointer;opacity: 1;transform: rotate(180deg);" onclick="window.location.href = &quot;https://ashsgrafiction.com/comics#sy20-21&quot;;">
+        <div class="text-center" data-bss-parallax-bg="true" id="cover-photo-1" style="background: url(&quot;/assets/img/final-bg.png&quot;) center / auto no-repeat;cursor: pointer;" onclick="window.location.href = &quot;https://ashsgrafiction.com/comics&quot;;"><img class="img-fluid d-xxl-flex justify-content-xxl-center" id="cover-photo-2" src="/assets/img/Final4.png" style="text-align: center;opacity: 0;height: 90vh;"></div>
+    </div>
+    <div id="cover-photo-no-parallax" style="cursor: pointer;background: url(&quot;/assets/img/Final4.png&quot;) center / cover no-repeat;" onclick="window.location.href = &quot;https://ashsgrafiction.com/comics#sy20-21&quot;;"><img class="img-fluid d-xxl-flex justify-content-xxl-center" id="cover-photo-2" src="/assets/img/Final4.png" style="text-align: center;opacity: 0;height: 90vh;"></div>
+    <main style="color: rgb(0,0,0);">
         <div class="toast fade text-end order-first fixed-top hide" role="alert" data-bs-delay="12000" style="margin-top: 200px;">
-            <div class="card border rounded">
-                <div class="card-body text-start" style="margin-left: 65px;">
-                    <h4 class="card-title">This website uses cookies</h4>
-                    <h6 class="text-text-muted card-subtitle mb-2"></h6>
-                    <p class="card-text">We collect anonymized data from you for analytics. You may read more in our&nbsp;<a href="/privacy.html">Privacy Policy</a>.<br></p><a class="card-link" id="optout" href="#" onclick="dontshow()">Opt-out</a><a class="card-link" id="dontshow" href="#" onclick="dontshow()">Don't show me this again</a>
-                </div>
+            <div class="toast-body" role="alert">
+                <h4>This website uses cookies</h4>
+                <p>We collect anonymized data from you for analytics. You may read more in our&nbsp;<a href="/privacy.html">Privacy Policy</a>.<br></p><a id="optout" href="#" onclick="disableanalytics();dontshow();">Opt-out</a>
+                <p></p><a id="dontshow" href="#" onclick="dontshow()">Don't show me this again</a>
             </div>
         </div>
         <section></section>
-        <section style="color: rgb(255,255,255);background: rgb(0,0,0);padding: 64px;padding-left: 80px;padding-right: 80px;">
-            <h1 class="display-3 text-start" style="font-family: Oswald, sans-serif;">About Us</h1>
+        <section id="about-us" style="color: rgb(255,255,255);background: rgb(0,0,0);padding: 64px;padding-top: 0px;">
+            <h1 class="display-3 text-start" style="font-family: Oswald, sans-serif;"><br>About Us</h1>
             <p class="lead" style="font-size: 16px;padding-left: 18px;padding-right: 18px; text-align: justify;"><br>There is a massive, popular culture which is growing among the Philippines and its youth--the culture of comics. In Grafiction SHS, we are all about one thing: making comics. We believe that comics is an artform with great expressive potential and an artform that has made great achievements.&nbsp;<br><br>Grafiction provides a home for comic writers, artists, and enthusiasts. Through the thinking hub that is the org, we can unlock their potential and open up a new facet of the ASHS.&nbsp;<br><br>We accept everyone who’s willing to make comics with us, whether you’re an already fairly experienced artist, or still a beginning comic writer. No matter what artstyle, topics, or stories you want to express through your comics, we’re willing to accept you.<br><br>As an organization, it is our goal to strengthen the notion of comics being an art form. We can also show the importance and eloquence of comics, which has been mostly overshadowed by flashier art forms like video games and film in both mainstream and academic circles. We, too, can show the public the skill and hard work it takes to create comics. This can help the many, many local artists, freelancers and comic creators in our society get the exposure and proper recognition they deserve.<br><br>Through the ideas we share in our stories, we aim to establish comics as an artform worth looking at and to make a difference in our society through our stories.<br><br><em>Through the power of visual storytelling, may our stories come to life.</em><br></p>
         </section>
-        <section>
-            <h1 class="display-1 text-center" style="font-family: Oswald, sans-serif;color: rgb(255,255,255);"><br><br><br>ASHS Grafiction<br><br><br><br></h1>
+        <section onclick="window.location.href = &quot;https://ashsgrafiction.com/comics/index.html#sy19-20&quot;;" style="cursor: pointer;"><img src="/assets/img/kickass-min.png" style="width: 100vw;">
+            <section class="text-center" id="about-us" style="color: rgb(255,255,255);background: url(&quot;/assets/img/skewed-print.png&quot;), url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;), rgb(122,106,106);"></section>
         </section>
+        <div data-bss-parallax-bg="true" style="background: linear-gradient(rgba(0,0,0,0.33) 45%, #ffffff), url(&quot;/assets/img/Graf-final.png&quot;) center / auto no-repeat;">
+            <h1 class="display-1 text-center" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);text-shadow: 0px 7px rgba(0,0,0,0.62);"><br><br><br><br><br><br><br><br>Graphic is our fiction.<br><br><br></h1>
+        </div>
     </main>
     <footer class="footer-basic">
         <div class="social"><a href="#"><i class="icon ion-social-facebook"></i></a></div>
