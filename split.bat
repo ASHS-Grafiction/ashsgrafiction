@@ -1,0 +1,1 @@
+7za a bootstrapdesign "ASHS Grafiction.bsdesign" -v30m -tzip
