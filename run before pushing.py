@@ -21,7 +21,7 @@ def compressImage(file, verbose = False):
     # your desired level, The more 
     # the value of quality variable 
     # and lesser the compression
-    picture = picture.quantize(256)
+    picture = picture.quantize(colors=256, method=None, kmeans=0, palette=None, dither=1)
     picture.save(file, 
                  "PNG", optimize=True)
 
