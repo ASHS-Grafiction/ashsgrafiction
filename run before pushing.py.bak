@@ -22,9 +22,9 @@ def compressImage(file, verbose = False):
     # the value of quality variable 
     # and lesser the compression
     # picture = picture.quantize(colors=256, method=None, kmeans=3, palette=None, dither=Image.FLOYDSTEINBERG)
-    picture = picture.convert("RGB", palette=Image.ADAPTIVE, colors=196)
+    picture = picture.convert("RGBA", palette=Image.ADAPTIVE, colors=196)
     
-    (width, height) = (picture.width // 1.15, picture.height // 1.15)
+    (width, height) = (round(picture.width // 1.15), round(picture.height // 1.15))
     
     picture = picture.resize((width, height), resample=PIL.Image.HAMMING, reducing_gap=3.0)
     picture.save(file, 
