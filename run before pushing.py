@@ -33,6 +33,63 @@ def compressImage(file, verbose = False):
     print('Compressed: ', os.stat(filepath).st_size)
     return
 
+def extraCompressImage(file, verbose = False):
+    
+    # Get the path of the file
+    filepath = os.path.join(os.getcwd(), 
+                            file)
+      
+    # open the image
+    picture = Image.open(filepath)
+
+    print('Precompressed: ', os.stat(filepath).st_size)
+      
+    # Save the picture with desired quality
+    # To change the quality of image,
+    # set the quality variable at
+    # your desired level, The more 
+    # the value of quality variable 
+    # and lesser the compression
+    # picture = picture.quantize(colors=256, method=None, kmeans=3, palette=None, dither=Image.FLOYDSTEINBERG)
+    picture = picture.convert("RGBA", palette=Image.ADAPTIVE, colors=256)
+    
+    (width, height) = (round(picture.width // 1.25), round(picture.height // 1.25))
+    
+    picture = picture.resize((width, height), resample=PIL.Image.HAMMING, reducing_gap=3.0)
+    picture.save(file, 
+                 "PNG", optimize=True)
+
+    print('Compressed: ', os.stat(filepath).st_size)
+    return
+
+def extraSuperCompressImage(file, verbose = False):
+    
+    # Get the path of the file
+    filepath = os.path.join(os.getcwd(), 
+                            file)
+      
+    # open the image
+    picture = Image.open(filepath)
+
+    print('Precompressed: ', os.stat(filepath).st_size)
+      
+    # Save the picture with desired quality
+    # To change the quality of image,
+    # set the quality variable at
+    # your desired level, The more 
+    # the value of quality variable 
+    # and lesser the compression
+    # picture = picture.quantize(colors=256, method=None, kmeans=3, palette=None, dither=Image.FLOYDSTEINBERG)
+    picture = picture.convert("RGBA", palette=Image.ADAPTIVE, colors=256)
+    
+    (width, height) = (round(picture.width // 1.35), round(picture.height // 1.35))
+    
+    picture = picture.resize((width, height), resample=PIL.Image.HAMMING, reducing_gap=3.0)
+    picture.save(file, 
+                 "PNG", optimize=True)
+
+    print('Compressed: ', os.stat(filepath).st_size)
+    return
 
 def main():
     
@@ -54,8 +111,14 @@ def main():
     for filename in glob.iglob(cwd + "\\assets\**", recursive=True):
         print(filename)
         if os.path.splitext(filename)[1].lower() in formats:
-            if os.stat(filename).st_size >= 1000000:
-                print('Compressing ', filename)
+            if os.stat(filename).st_size >= 3000000:
+                print('Super compressing ', filename)
+                extraSuperCompressImage(filename, verbose)
+            elif os.stat(filename).st_size >= 2000000:
+                print('Extra compressing ', filename)
+                extraCompressImage(filename, verbose)
+            elif os.stat(filename).st_size >= 1000000:
+                print('Regular compressing ', filename)
                 compressImage(filename, verbose)
 
     print("Splitting bootstrap file")
