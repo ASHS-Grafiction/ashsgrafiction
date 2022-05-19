@@ -26,22 +26,54 @@
     </div>
 </nav>
 </nav>
-</head><body><main style="height: -moz-fit-content; height: fit-content; background: linear-gradient(rgb(59,55,55), rgb(255,255,255) 93%), url(&quot;assets/img/candyhole.png&quot;);color: rgb(33, 37, 41);"><section style="padding: 32px;padding-right: 64px;padding-left: 64px;"><section style="background: url(&quot;assets/img/robsbanner.png&quot;) top / contain no-repeat;margin-left: -55px;margin-right: -55px;"><section><h1 class="display-1 text-uppercase text-center" style="font-family: Oswald, sans-serif;color: rgb(255,255,255);text-align: center;letter-spacing: -3px;text-shadow: 0px 5px 3px rgba(0,0,0,0.54);margin-top: 28px;"><br>ART GALLERY<br></h1><h2 style="font-family: ABeeZee, sans-serif;text-align: center;color: #ffffff;text-shadow: 0px 4px 3px var(--bs-gray-900);">SY 20-21<br></h2><a class="lightbox" hidden="">Link</a><div id="artgallery"><script>
+</head><body><main style="height: -moz-fit-content; height: fit-content; background: linear-gradient(rgb(59,55,55), rgb(255,255,255) 93%), url(&quot;assets/img/candyhole.png&quot;);color: rgb(33, 37, 41);"><section style="padding: 32px;padding-right: 64px;padding-left: 64px;"><section style="background: url(&quot;assets/img/robsbanner.png&quot;) top / contain no-repeat;margin-left: -55px;margin-right: -55px;"><section><h1 class="display-1 text-uppercase text-center" style="font-family: Oswald, sans-serif;color: rgb(255,255,255);text-align: center;letter-spacing: -3px;text-shadow: 0px 5px 3px rgba(0,0,0,0.54);margin-top: 28px;"><br>ART GALLERY<br></h1><a class="lightbox" hidden="">Link</a><div id="artgallery"><script>
     (() => {
         // TODO: Server side traversal of gallery and element generation
-        const images = [ "@Davvart(twt).png", "@Dyscomm(twt,ig) Maria Clara.png", "@primo_hoarder(twt).png", "1-Bit Detective.png", "13.jpg", "Alo (no art acc)_palaso_fanart.png", "Aruego.png", "Aruego-Castaneda.png", "Baquiran-1.png", "Baring.png", "Baring-Vera.png", "Baring-Vera2.png", "Baring-Vera3.png", "Bautista.png", "bea (no art acc)_nagmamahal maria clara.png", "Bebe!!.png", "Bicomong.png", "Bicomong-Galicia.png", "Buan.png", "Carranto.jpg", "Carranto.png", "Choi.png", "Choi-1.png", "Competente.png", "Competente-Dagdag.png", "Concept_1.png", "De Guzman.jpg", "De Guzman-Evangelista.jpeg", "De Guzman-Pagdilao.jpg", "De Guzman-Pagdilao2.png", "Evangelista and De Guzman2.jpeg", "Evangelista.jpg", "fanart.jpg", "Germar.png", "Germar-Lopez.png", "GRAFOFFICERS_MARTYR.png", "GRAFOFFICERS_MUSTANG.png", "Juatco.png", "Manzano-Owen.png", "Tondo.png", "trese fanart.png", "Trese.png", "tresefanart.png", "TreseHD.png", "@biancarranto(ig).png" ];
-        for(var i = 0; i < images.length; i++){
-            AddImage(images[i]);
+        const images21_22 = [ "panatang makabayan cover.png", "brainstorm era gab.png", "final pam colorification.png", "pride.jpeg", "adaine.png", "joker.png", "witch.png", "WATERBOOK.jpeg", "unnamed (10).png", "unnamed (8).png", "unnamed (7).png", "unnamed (6).png", "unnamed (5).png", "unnamed (4).png", "unnamed (3).png", "Screen Shot 2022-05-19 at 8.42.57 PM.png", "Li Zhiyang.png", "Screen Shot 2022-05-19 at 8.42.00 PM.png", "nyoom.png", "unnamed (2).png", "unnamed (1).png", "unnamed.png", "p1 compressed-min.png", "F2F Comic.png", "Sam Colors.gif" ];
+        
+        const images20_21 = ["@Davvart(twt).png", "@Dyscomm(twt,ig) Maria Clara.png", "@primo_hoarder(twt).png", "1-Bit Detective.png", "13.jpg", "Alo (no art acc)_palaso_fanart.png", "Aruego.png", "Aruego-Castaneda.png", "Baquiran-1.png", "Baring.png", "Baring-Vera.png", "Baring-Vera2.png", "Baring-Vera3.png", "Bautista.png", "bea (no art acc)_nagmamahal maria clara.png", "Bebe!!.png", "Bicomong.png", "Bicomong-Galicia.png", "Buan.png", "Carranto.jpg", "Carranto.png", "Choi.png", "Choi-1.png", "Competente.png", "Competente-Dagdag.png", "Concept_1.png", "De Guzman.jpg", "De Guzman-Evangelista.jpeg", "De Guzman-Pagdilao.jpg", "De Guzman-Pagdilao2.png", "Evangelista and De Guzman2.jpeg", "Evangelista.jpg", "fanart.jpg", "Germar.png", "Germar-Lopez.png", "GRAFOFFICERS_MARTYR.png", "GRAFOFFICERS_MUSTANG.png", "Juatco.png", "Manzano-Owen.png", "Tondo.png", "trese fanart.png", "Trese.png", "tresefanart.png", "TreseHD.png", "@biancarranto(ig).png" ];
+        
+        AddH2("SY 2021-2022");
+        for(var i = 0; i < images21_22.length; i++){
+            if(i == 0){
+                AddImage(images21_22[i], "bigbox");
+                AddBR();
+            }
+            else {
+                AddImage(images21_22[i], "lightbox");
+            }
+            if(i % 4 == 0 && i != 0){
+                AddBR();
+            }
         }
+        
+        AddH2("SY 2020-2021");
+        for(var i = 1; i < images20_21.length; i++){
+            AddImage(images20_21[i-1], "lightbox");
+            if(i % 4 == 0 && i != 0){
+                AddBR();
+            }
+        }
+        AddImage(images20_21[images20_21.length-1], "lightbox");
 
-        function AddImage(filename){
+        function AddImage(filename, c_class){
             var link = document.createElement("a");
             var img = document.createElement("img");
             link.setAttribute("href", "assets/img/artgallery/" + filename);
-            img.setAttribute("class", "lightbox");
+            img.setAttribute("class", c_class);
             img.setAttribute("src", "assets/img/artgallery/" + filename);
             link.appendChild(img);
             document.getElementById("artgallery").appendChild(link);
+        }
+        function AddH2(text){
+            var h2 = document.createElement("h2");
+            h2.setAttribute("style", "font-family: ABeeZee, sans-serif;text-align: center;color: #ffffff;text-shadow: 0px 4px 3px var(--bs-gray-900); margin-top: 3em; margin-bottom: 1em;");
+            h2.innerHTML = text;
+            document.getElementById("artgallery").appendChild(h2);
+        }
+        function AddBR(){
+            var br = document.createElement("br");
+            document.getElementById("artgallery").appendChild(br);
         }
     })();
 </script></div></section></section></section></main><footer class="footer-basic"><div class="social"><a href="#"><i class="icon ion-social-facebook"></i></a></div><ul class="list-inline"><li class="list-inline-item" style="font-family: ABeeZee, sans-serif;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">Home</a></li><li class="list-inline-item" style="font-family: ABeeZee, sans-serif;"><a href="about.html" style="font-family: ABeeZee, sans-serif;">About</a></li><li class="list-inline-item" style="font-family: ABeeZee, sans-serif;"><a href="history.html" style="font-family: ABeeZee, sans-serif;">History</a></li><li class="list-inline-item" style="font-family: ABeeZee, sans-serif;"><a href="https://drive.google.com/file/d/1hZSwka7SuKQxe8N7KNMjItScAmi3_2Kc/view" style="font-family: ABeeZee, sans-serif;" target="_blank">Constitution</a></li></ul><p class="copyright">ASHS GRAFICTION&nbsp;© 2022<br></p><ul class="list-inline"><li class="list-inline-item" style="font-family: ABeeZee, sans-serif;"><a href="privacy.html" style="font-family: ABeeZee, sans-serif;font-size: 13px;">Privacy Policy</a></li></ul></footer><script src="assets/bootstrap/js/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="assets/js/script.min.js"></script></body></html>
