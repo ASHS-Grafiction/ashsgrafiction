@@ -40,9 +40,9 @@
         const images20_21 = ["@Davvart(twt).png", "@Dyscomm(twt,ig) Maria Clara.png", "@primo_hoarder(twt).png", "1-Bit Detective.png", "13.jpg", "Alo (no art acc)_palaso_fanart.png", "Aruego.png", "Aruego-Castaneda.png", "Baquiran-1.png", "Baring.png", "Baring-Vera.png", "Baring-Vera2.png", "Baring-Vera3.png", "Bautista.png", "bea (no art acc)_nagmamahal maria clara.png", "Bebe!!.png", "Bicomong.png", "Bicomong-Galicia.png", "Buan.png", "Carranto.jpg", "Carranto.png", "Choi.png", "Choi-1.png", "Competente.png", "Competente-Dagdag.png", "Concept_1.png", "De Guzman.jpg", "De Guzman-Evangelista.jpeg", "De Guzman-Pagdilao.jpg", "De Guzman-Pagdilao2.png", "Evangelista and De Guzman2.jpeg", "Evangelista.jpg", "fanart.jpg", "Germar.png", "Germar-Lopez.png", "GRAFOFFICERS_MARTYR.png", "GRAFOFFICERS_MUSTANG.png", "Juatco.png", "Manzano-Owen.png", "Tondo.png", "trese fanart.png", "Trese.png", "tresefanart.png", "TreseHD.png", "@biancarranto(ig).png" ];
         
 		AddH2("SY 2025-2026");
-        for(var i = 1; i < images25_26.length; i++){
-            AddImage(images25_26[i-1], "lightbox");
-            if(i % 4 == 0 && i != 0){
+        for(var i = 0; i < images25_26.length; i++){
+            AddImage(images25_26[i], "lightbox");
+            if((i + 1) % 4 == 0 && (i + 1) != 0){
                 AddBR();
             }
         }
