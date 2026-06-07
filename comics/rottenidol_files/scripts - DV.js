@@ -13,7 +13,7 @@
   const defaultConfig = {
 	smoothScroll: true,
 	darkMode: true,
-	seamless: false,
+	seamless: true,
 	horizontal: false,
   };
 
