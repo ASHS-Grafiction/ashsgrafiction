@@ -103,23 +103,6 @@ def main():
                       
     # finds current working dir
     cwd = os.getcwd()
-  
-    formats = ('.png')
-      
-    # looping through all the files
-    # in a current directory
-    for filename in glob.iglob(cwd + "\\assets\**", recursive=True):
-        print(filename)
-        if os.path.splitext(filename)[1].lower() in formats:
-            if os.stat(filename).st_size >= 3000000:
-                print('Super compressing ', filename)
-                extraSuperCompressImage(filename, verbose)
-            elif os.stat(filename).st_size >= 2000000:
-                print('Extra compressing ', filename)
-                extraCompressImage(filename, verbose)
-            elif os.stat(filename).st_size >= 1000000:
-                print('Compressing ', filename)
-                compressImage(filename, verbose)
 
     print("Splitting bootstrap file")
 
