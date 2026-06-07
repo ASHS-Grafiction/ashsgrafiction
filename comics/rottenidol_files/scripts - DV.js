@@ -499,7 +499,7 @@
 	  document.body.classList.add('seamless');
 		$("helper").css( "display", "none" );
 	} else {
-	  document.body.classList.remove('seamless');
+	  
 	}
 	writeConfig({
 	  seamless: seamlessEnabled,
@@ -730,4 +730,7 @@
   }
 
   main();
+
+  document.body.classList.add('seamless');
+
 })();
