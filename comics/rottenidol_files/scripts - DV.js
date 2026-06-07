@@ -342,7 +342,6 @@
 
 		if(seamlessCheckbox.checked == true) {
 			seamlessCheckbox.checked = false;
-			document.body.classList.remove('seamless');
 			writeConfig({
 				seamless: seamlessEnabled,
 			});
@@ -685,7 +684,6 @@
 				setImagesDimensions(screenClamp.shrink, getWidth(), getHeight());
 				if(seamlessCheckbox.checked == true) {
 					seamlessCheckbox.checked = false;
-					document.body.classList.remove('seamless');
 					writeConfig({
 						seamless: seamlessEnabled,
 					});
@@ -722,20 +720,6 @@
 				}
 			} else {
 				setImagesWidth(screenClamp.fit, getWidth());
-				if(seamlessCheckbox.checked == true) {
-					seamlessCheckbox.checked = false;
-					document.body.classList.remove('seamless');
-					writeConfig({
-						seamless: seamlessEnabled,
-					});
-				}
-				if(smoothScrollCheckbox.checked == true) {
-					smoothScrollCheckbox.checked = false; 
-					window.pauseZenscroll = !event.target.checked;
-					writeConfig({
-						smoothScroll: event.target.checked,
-					});
-				}
 			}
 			console.log("Horizontal: " + defaultConfig.horizontal);
 		}
