@@ -29,13 +29,24 @@
     </div>
 </nav>
 </nav>
-</head><body><main style="height: -moz-fit-content; height: fit-content; background: linear-gradient(rgb(59,55,55), rgb(255,255,255) 93%), url(&quot;assets/img/candyhole.png&quot;);color: rgb(33, 37, 41);"><section style="padding: 32px;padding-right: 64px;padding-left: 64px;"><section style="background: url(&quot;assets/img/robsbanner.png&quot;) top / contain no-repeat;margin-left: -55px;margin-right: -55px;"><section><h1 class="display-1 text-uppercase text-center" style="font-family: Oswald, sans-serif;color: rgb(255,255,255);text-align: center;letter-spacing: -3px;text-shadow: 0px 5px 3px rgba(0,0,0,0.54);margin-top: 28px;"><br>ART GALLERY<br></h1><a class="lightbox" hidden="">Link</a><div id="artgallery"><script>
+</head><body><main style="height: -moz-fit-content; height: fit-content; background: linear-gradient(rgb(59,55,55), rgb(255,255,255) 93%), url(&quot;assets/img/candyhole.png&quot;);color: rgb(33, 37, 41);"><section style="padding: 32px;padding-right: 64px;padding-left: 64px;"><section style="background: url(&quot;assets/img/robsbanner.png&quot;) top / contain no-repeat;margin-left: -55px;margin-right: -55px;"><section><h1 class="display-1 text-uppercase text-center" style="font-family: Oswald, sans-serif;color: rgb(255,255,255);text-align: center;letter-spacing: -3px;text-shadow: 0px 5px 3px rgba(0,0,0,0.54);margin-top: 28px;"><br>ART GALLERY</h1><a class="lightbox" hidden="">Link</a><div id="artgallery"><script>
     (() => {
         // TODO: Server side traversal of gallery and element generation
+		
+		const images25_26 = [ "Lila Momohara _ 1.png", "Copy of IMG_7598.png", "Caparas - Dark Side of the Time Cube.png", "Caparas - IDOLIZED.png", "Gipulan - Is It Really Ending.png", "Astrero - a lil poem.png", "Copy of Copy of Ishtar.png", "Tumaliuan.png", "Shroud.png", "Ora_a Page 1.png", "Caped Crusader.jpg", "Felicity.png" ];
+		
         const images21_22 = [ "panatang makabayan cover.png", "brainstorm era gab.png", "final pam colorification.png", "pride.jpeg", "adaine.png", "joker.png", "witch.png", "WATERBOOK.jpeg", "unnamed (10).png", "unnamed (8).png", "unnamed (7).png", "unnamed (6).png", "unnamed (5).png", "unnamed (4).png", "unnamed (3).png", "Screen Shot 2022-05-19 at 8.42.57 PM.png", "Li Zhiyang.png", "Screen Shot 2022-05-19 at 8.42.00 PM.png", "nyoom.png", "unnamed (2).png", "unnamed (1).png", "unnamed.png", "p1 compressed-min.png", "F2F Comic.png", "Sam Colors.gif" ];
         
         const images20_21 = ["@Davvart(twt).png", "@Dyscomm(twt,ig) Maria Clara.png", "@primo_hoarder(twt).png", "1-Bit Detective.png", "13.jpg", "Alo (no art acc)_palaso_fanart.png", "Aruego.png", "Aruego-Castaneda.png", "Baquiran-1.png", "Baring.png", "Baring-Vera.png", "Baring-Vera2.png", "Baring-Vera3.png", "Bautista.png", "bea (no art acc)_nagmamahal maria clara.png", "Bebe!!.png", "Bicomong.png", "Bicomong-Galicia.png", "Buan.png", "Carranto.jpg", "Carranto.png", "Choi.png", "Choi-1.png", "Competente.png", "Competente-Dagdag.png", "Concept_1.png", "De Guzman.jpg", "De Guzman-Evangelista.jpeg", "De Guzman-Pagdilao.jpg", "De Guzman-Pagdilao2.png", "Evangelista and De Guzman2.jpeg", "Evangelista.jpg", "fanart.jpg", "Germar.png", "Germar-Lopez.png", "GRAFOFFICERS_MARTYR.png", "GRAFOFFICERS_MUSTANG.png", "Juatco.png", "Manzano-Owen.png", "Tondo.png", "trese fanart.png", "Trese.png", "tresefanart.png", "TreseHD.png", "@biancarranto(ig).png" ];
         
+		AddH2("SY 2025-2026");
+        for(var i = 1; i < images25_26.length; i++){
+            AddImage(images25_26[i-1], "lightbox");
+            if(i % 4 == 0 && i != 0){
+                AddBR();
+            }
+        }
+		
         AddH2("SY 2021-2022");
         for(var i = 0; i < images21_22.length; i++){
             if(i == 0){
