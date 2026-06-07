@@ -321,6 +321,7 @@
   function handleHorizontalReader(config) {
 		const horizontalReaderEnabled = event.target.checked;
 		const darkModeEnabled = event.target.checked;
+		const seamlessEnabled = event.target.checked;
 		if (horizontalReaderEnabled) {	
 			document.body.classList.add("stop-scrolling");	
 			$(".page").css( "margin-bottom", "4000px" );
