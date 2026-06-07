@@ -683,7 +683,6 @@
 			if(JSON.parse(localStorage.getItem(storageKey)).horizontal){
 				setImagesDimensions(screenClamp.shrink, getWidth(), getHeight());
 				if(seamlessCheckbox.checked == true) {
-					seamlessCheckbox.checked = false;
 					writeConfig({
 						seamless: seamlessEnabled,
 					});
@@ -705,8 +704,6 @@
 			if(defaultConfig.horizontal){
 				setImagesDimensions(screenClamp.shrink, getWidth(), getHeight());
 				if(seamlessCheckbox.checked == true) {
-					seamlessCheckbox.checked = false;
-					document.body.classList.remove('seamless');
 					writeConfig({
 						seamless: seamlessEnabled,
 					});
